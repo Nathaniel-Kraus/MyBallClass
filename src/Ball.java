@@ -2,6 +2,7 @@ import java.awt.*;
 import javax.swing.*;
 public class Ball
 {
+  //im in replit
     private int x = 0;
     private int y = 0;
     private int size = 0;
