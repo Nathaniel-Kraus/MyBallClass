@@ -3,43 +3,21 @@ import javax.swing.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.ArrayList;
-public class BallPanel extends JPanel
+public class BallPanel extends JPanel implements KeyListener
 {
     Ball blah;
     ArrayList <Ball> ballz = new ArrayList<>();
 
-    public BallPanel()
-    {
-        setFocusable(true);
+    public BallPanel() {
+
         blah = new Ball(this);
         setBackground(Color.RED);
-        addKeyListener(new KeyListener()
-        {
-            @Override
-            public void keyTyped(KeyEvent e) {
-
-            }
-
-            @Override
-            public void keyPressed(KeyEvent e) {
-                System.out.println(e.getKeyCode());
-                int key = e.getKeyCode();
-                if (key == 68);
-                //blah.moveRight();
-            }
-
-            @Override
-            public void keyReleased(KeyEvent e) {
-
-            }
-
-
-
+        addKeyListener(this);
+        setFocusable(true);
 //        for (int i = 0; i < 1;i++)
 //        {
 //            ballz.add(new Ball(this));
 //        }
-    });
     }
 
         protected void paintComponent(Graphics g)
@@ -60,4 +38,35 @@ public class BallPanel extends JPanel
         repaint();
     }
 
+    @Override
+    public void keyTyped(KeyEvent e) {
+
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        int key = e.getKeyCode();
+        System.out.println("testing");
+        if (key == KeyEvent.VK_W);
+        {
+            blah.moveUp();
+        }
+        if (key == KeyEvent.VK_A);
+        {
+            blah.moveLeft();
+        }
+        if (key == KeyEvent.VK_D);
+        {
+            blah.moveRight();
+        }
+        if (key == KeyEvent.VK_S);
+        {
+            blah.moveDown();
+        }
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+
+    }
 }

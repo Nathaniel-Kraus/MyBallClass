@@ -18,6 +18,8 @@ public class DrawFrame1
 
         myFrame2.setVisible(true);
         myFrame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        
     }
 }
 
