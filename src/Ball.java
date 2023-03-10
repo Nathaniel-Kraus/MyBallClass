@@ -5,23 +5,23 @@ public class Ball
   //im in replit
     private int x = 0;
     private int y = 0;
-    private int size = 0;
+    private int size = 20;
     private int xSpeed = 0;
     private int ySpeed = 0;
     //String color = 0;
-    private int random1 = (int)((Math.random()*10)+5);
-    private int random2 = (int)((Math.random()*100)+20);
-    private int random3 = (int)((Math.random()*10)+5);
+    //private int random1 = (int)((Math.random()*10)+5);
+    //private int random2 = (int)((Math.random()*100)+20);
+    //private int random3 = (int)((Math.random()*10)+5);
     BallPanel ballie;
     Color rainbow = Color.BLUE;
     public Ball(BallPanel ballie)
     {
         this.ballie = ballie;
-        x = random1;
-        y = random1;
-        size = random2;
-        xSpeed = random3;
-        ySpeed = random3;
+        x = 0;
+        y = 0;
+        size = 20;
+        xSpeed = 0;
+        ySpeed = 0;
         rainbow = new Color((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
     }
 
@@ -31,29 +31,29 @@ public class Ball
         bull.fillOval(x,y,size,size);
 //        x+= xSpeed;
 //        y+= ySpeed;
-        if (x >= ballie.getWidth()-size || x <= 0)
-        {
-            xSpeed *= -1;
-        }
-        if (y >= ballie.getHeight()-size || y <= 0)
-        {
-            ySpeed *= -1;
-        }
+//        if (x >= ballie.getWidth()-size || x <= 0)
+//        {
+//            xSpeed *= -1;
+//        }
+//        if (y >= ballie.getHeight()-size || y <= 0)
+//        {
+//            ySpeed *= -1;
+//        }
     }
     public void moveRight ()
     {
-        x += xSpeed;
+        x += 10;
     }
     public void moveLeft ()
     {
-        x -= xSpeed;
+        x -= 10;
     }
     public void moveUp ()
     {
-        y += ySpeed;
+        y -= 10;
     }
     public void moveDown ()
     {
-        y -= ySpeed;
+        y += 10;
     }
 }

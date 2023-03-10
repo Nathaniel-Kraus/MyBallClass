@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b65967fc-aab7-4fe9-9e74-d82c33133c06" name="Changes" comment="Initial Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ball.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BallPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BallPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DrawFrame1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DrawFrame1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +31,7 @@
     <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/DrawFrame1.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/DrawFrame1.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -84,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674581060846</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Initial Commit">
+      <created>1676482177754</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1676482177754</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

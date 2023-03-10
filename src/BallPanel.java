@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.ArrayList;
-public class BallPanel extends JPanel implements KeyListener
+public class BallPanel extends JPanel
 {
     Ball blah;
     ArrayList <Ball> ballz = new ArrayList<>();
@@ -12,8 +12,43 @@ public class BallPanel extends JPanel implements KeyListener
 
         blah = new Ball(this);
         setBackground(Color.RED);
-        addKeyListener(this);
-        setFocusable(true);
+        this.setFocusable(true);
+        addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                System.out.println("HI");
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                int key = e.getKeyCode();
+                System.out.println(key);
+                System.out.println("testing");
+                if (key == 38)
+                {
+                    blah.moveUp();
+                }
+                if (key == 37)
+                {
+                    blah.moveLeft();
+                }
+                if (key == 39)
+                {
+                    System.out.println("moving right");
+                    blah.moveRight();
+                }
+                if (key == 40)
+                {
+                    blah.moveDown();
+                }
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+
+            }
+        });
+
 //        for (int i = 0; i < 1;i++)
 //        {
 //            ballz.add(new Ball(this));
@@ -38,35 +73,5 @@ public class BallPanel extends JPanel implements KeyListener
         repaint();
     }
 
-    @Override
-    public void keyTyped(KeyEvent e) {
 
-    }
-
-    @Override
-    public void keyPressed(KeyEvent e) {
-        int key = e.getKeyCode();
-        System.out.println("testing");
-        if (key == KeyEvent.VK_W);
-        {
-            blah.moveUp();
-        }
-        if (key == KeyEvent.VK_A);
-        {
-            blah.moveLeft();
-        }
-        if (key == KeyEvent.VK_D);
-        {
-            blah.moveRight();
-        }
-        if (key == KeyEvent.VK_S);
-        {
-            blah.moveDown();
-        }
-    }
-
-    @Override
-    public void keyReleased(KeyEvent e) {
-
-    }
 }
