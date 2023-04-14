@@ -43,17 +43,31 @@ public class Ball
     public void moveRight ()
     {
         x += 10;
+        if (x > ballie.getPreferredSize().getWidth()-size)
+        {
+            x = 0;
+        }
     }
     public void moveLeft ()
     {
         x -= 10;
+        if (x < -size)
+        {
+            x = (int) ballie.getPreferredSize().getWidth();
+        }
     }
     public void moveUp ()
     {
-        y -= 10;
+        if (y > 0)
+           {
+               y -= 10;
+           }
     }
     public void moveDown ()
     {
-        y += 10;
+          if(y < (int) ballie.getPreferredSize().getHeight()-size)
+             {
+               y += 10;
+             }
     }
 }

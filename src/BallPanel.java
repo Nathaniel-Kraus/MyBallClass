@@ -13,6 +13,7 @@ public class BallPanel extends JPanel
         blah = new Ball(this);
         setBackground(Color.RED);
         this.setFocusable(true);
+        setPreferredSize(new Dimension(500,500));
         addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
@@ -34,7 +35,6 @@ public class BallPanel extends JPanel
                 }
                 if (key == 39)
                 {
-                    System.out.println("moving right");
                     blah.moveRight();
                 }
                 if (key == 40)
@@ -65,11 +65,13 @@ public class BallPanel extends JPanel
 //            //System.out.println("testing 123");
 //        }
         try {
-            Thread.sleep(10);
+            Thread.sleep(1);
         }
         catch(Exception e) {
             System.out.println(e);
         }
+
+
         repaint();
     }
 
